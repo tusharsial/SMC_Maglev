@@ -71,6 +71,13 @@ value is nominal.
 The simulation results indicate that the proposed control schemes work well when applied to the magnetic levitation system. Moreover, the robustness
 of the developed control schemes to variations in the parameters of the system is investigated. It can be concluded from the simulations that the static control scheme is somewhat robust to changes in the mass of the object. However, the dynamic controllers are very robust. It is also clear that the dynamic controllers greatly reduce the chattering. Clearly, The third control scheme (the modified dynamic sliding mode scheme) gives the best results among the three controllers.
 
+# Simulation Video 
+
+
+
+https://user-images.githubusercontent.com/74113713/188458985-2607381a-5c88-4832-8027-ab00720a6d08.mp4
+
+
 # Note: 
 I haven't included the derivation and equations of the proposed controllers here. You can refer to the following presentation for the equations of the controllers.  
 https://docs.google.com/presentation/d/1WB3b9q4LgEHdtEV8Yyfv44NVU2DjbPQkT4U9KsdY0Ew/edit#slide=id.p  
