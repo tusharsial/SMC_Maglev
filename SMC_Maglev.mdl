@@ -1,0 +1,4261 @@
+Model {
+  Name			  "SMC_Maglev"
+  Version		  9.2
+  SavedCharacterEncoding  "windows-1252"
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.43"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
+    NumResetEvents	    0
+    HasInitializeEvent	    0
+    HasTerminateEvent	    0
+    PreCompExecutionDomainType "Unset"
+    IsExportFunctionModel   0
+    NumParameterArguments   0
+    NumExternalFileReferences 0
+    OrderedModelArguments   1
+  }
+  LogicAnalyzerPlugin	  "on"
+  WebScopes_FoundationPlugin "on"
+  SLCCPlugin		  "on"
+  DiagnosticSuppressor	  "on"
+  NotesPlugin		  "on"
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  LastSavedArchitecture	  "win64"
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [-7.0, -7.0, 1550.0, 878.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[1]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Array {
+	Type			"Simulink.EditorInfo"
+	Dimension		4
+	Object {
+	  $ObjectID		  5
+	  IsActive		  [1]
+	  ViewObjType		  "SimulinkTopLevel"
+	  LoadSaveID		  "0"
+	  Extents		  [1807.0, 804.0]
+	  ZoomFactor		  [1.1976911882530246]
+	  Offset		  [-49.771806337046314, -21.344100525414547]
+	}
+	Object {
+	  $ObjectID		  6
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "19"
+	  Extents		  [1807.0, 804.0]
+	  ZoomFactor		  [1.4999999999999998]
+	  Offset		  [-7.9295334838221958, -87.293745792946979]
+	}
+	Object {
+	  $ObjectID		  7
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "42"
+	  Extents		  [1807.0, 804.0]
+	  ZoomFactor		  [1.5]
+	  Offset		  [26.314718061273133, -87.918095238095219]
+	}
+	Object {
+	  $ObjectID		  8
+	  IsActive		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "24"
+	  Extents		  [1807.0, 804.0]
+	  ZoomFactor		  [1.75]
+	  Offset		  [37.466666666666733, -64.8476190476192]
+	}
+	PropName		"EditorsInfo"
+      }
+      Array {
+	Type			"Simulink.DockComponentInfo"
+	Dimension		1
+	Object {
+	  $ObjectID		  9
+	  Type			  "GLUE2:PropertyInspector"
+	  ID			  "Property Inspector"
+	  Visible		  [1]
+	  CreateCallback	  ""
+	  UserData		  ""
+	  Floating		  [0]
+	  DockPosition		  "Right"
+	  Width			  [512]
+	  Height		  [384]
+	}
+	PropName		"DockComponentsInfo"
+      }
+      WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
+      "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAAB5AP////sAAABgAFMAaQBtAHUAb"
+      "ABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZ"
+      "QBzAAAAAAD/////AAAApwD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAd"
+      "ABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAhYA////AAAHPAAAA2sAAAABAAAAAgAAAAEAAAAC/"
+      "AAAAAMAAAAAAAAAAQAAADYAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAEwAZQBmAHQDAAAAAP////8AAAAAA"
+      "AAAAAAAAAEAAAABAAAAOABjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAUgBpAGcAaAB0AwAAAAD/////AAAAA"
+      "AAAAAAAAAADAAAAAQAAADoAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAEIAbwB0AHQAbwBtAAAAAAD/////A"
+      "AAAAAAAAAA="
+    }
+  }
+  HideAutomaticNames	  on
+  Created		  "Sat Dec 11 01:30:00 2021"
+  Creator		  "piyus"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "piyus"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Jan 03 11:35:38 2022"
+  RTWModifiedTimeStamp	  563110537
+  ModelVersionFormat	  "1.%<AutoIncrement:0>"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "disabled"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowAllPropagatedSignalLabels	off
+  PortDataTypeDisplayFormat "AliasTypeOnly"
+  ShowEditTimeErrors	  on
+  ShowEditTimeWarnings	  on
+  ShowEditTimeAdvisorChecks off
+  ShowPortUnits		  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  VariantCondition	  off
+  ShowLinearizationAnnotations on
+  ShowVisualizeInsertedRTB on
+  ShowMarkup		  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockVariantConditionDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  FunctionConnectors	  off
+  BrowserLookUnderMasks	  off
+  MultiThreadCoSim	  "on"
+  SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  EnablePacing		  off
+  PacingRate		  1
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    11
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "SMC_Maglev"
+    overrideMode_	    [0.0]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "SMC_Maglev"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  OrderedModelArguments	  on
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      12
+      Version		      "1.18.1"
+      DisabledProps	      []
+      Description	      ""
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  13
+	  Version		  "1.18.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  StartTime		  "0.0"
+	  StopTime		  "1"
+	  AbsTol		  "auto"
+	  AutoScaleAbsTol	  on
+	  FixedStep		  "0.0001"
+	  InitialStep		  "auto"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  EnableMultiTasking	  off
+	  ConcurrentTasks	  off
+	  SolverName		  "ode1"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverInfoToggleStatus  on
+	  IsAutoAppliedInSIP	  off
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SampleTimeProperty	  []
+	  DecoupledContinuousIntegration off
+	  MinimalZcImpactIntegration off
+	  Solver		  ode1
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  14
+	  Version		  "1.18.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Dataset"
+	  SignalLoggingSaveFormat "Dataset"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  VisualizeSimOutput	  on
+	  StreamToWorkspace	  off
+	  StreamVariableName	  "streamout"
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	  LoggingToFile		  off
+	  DatasetSignalFormat	  "timeseries"
+	  LoggingFileName	  "out.mat"
+	  LoggingIntervals	  "[-inf, inf]"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  15
+	  Version		  "1.18.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    Cell		    "EfficientTunableParamExpr"
+	    PropName		    "DisabledProps"
+	  }
+	  Description		  ""
+	  Components		  []
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  DefaultParameterBehavior "Tunable"
+	  UseDivisionForNetSlopeComputation "off"
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  CachingGlobalReferences off
+	  GlobalBufferReuse	  on
+	  StrengthReduction	  off
+	  AdvancedOptControl	  ""
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  PassReuseOutputArgsThreshold 12
+	  ExpressionDepthLimit	  128
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  LifeSpan		  "auto"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "off"
+	  AccelVerboseBuild	  off
+	  OptimizeBlockOrder	  "off"
+	  OptimizeDataStoreBuffers on
+	  BusAssignmentInplaceUpdate on
+	  DifferentSizesBufferReuse off
+	  UseRowMajorAlgorithm	  off
+	  OptimizationLevel	  "level2"
+	  OptimizationPriority	  "Balanced"
+	  OptimizationCustomize	  on
+	  LabelGuidedReuse	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  16
+	  Version		  "1.18.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "UseOnlyExistingSharedCode"
+	    PropName		    "DisabledProps"
+	  }
+	  Description		  ""
+	  Components		  []
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  StringTruncationChecking "error"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Simplified"
+	  MergeDetectMultiDrivingBlocksExec "error"
+	  CheckExecutionContextPreStartOutputMsg off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  ExportedTasksRateTransMsg "none"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  FcnCallInpInsideContextMsg "error"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  UseOnlyExistingSharedCode "error"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "error"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  AllowSymbolicDim	  on
+	  RowMajorDimensionSupport off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "none"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  ChecksumConsistencyForSSReuse	"none"
+	  MatchCodeGenerationContextForUpdateDiagram "none"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  SymbolicDimMinMaxWarning "warning"
+	  LossOfSymbolicDimsSimulationWarning "warning"
+	  LossOfSymbolicDimsCodeGenerationWarning "error"
+	  SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "error"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "error"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnreachableExecutionPathDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	  SFOutputUsedAsStateInMooreChartDiag "error"
+	  SFTemporalDelaySmallerThanSampleTimeDiag "warning"
+	  SFSelfTransitionDiag	  "warning"
+	  SFExecutionAtInitializationDiag "warning"
+	  SFMachineParentedDataDiag "error"
+	  IntegerSaturationMsg	  "warning"
+	  AllowedUnitSystems	  "all"
+	  UnitsInconsistencyMsg	  "warning"
+	  AllowAutomaticUnitConversions	on
+	  RCSCRenamedMsg	  "warning"
+	  RCSCObservableMsg	  "warning"
+	  ForceCombineOutputUpdateInSim	off
+	  UnitDatabase		  ""
+	  UnderSpecifiedDimensionMsg "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  17
+	  Version		  "1.18.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  64
+	  ProdBitPerSizeT	  64
+	  ProdBitPerPtrDiffT	  64
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "Float"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "LittleEndian"
+	  ProdWordSize		  64
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "Intel->x86-64 (Windows64)"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetBitPerSizeT	  32
+	  TargetBitPerPtrDiffT	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	  UseEmbeddedCoderFeatures on
+	  UseSimulinkCoderFeatures on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  18
+	  Version		  "1.18.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  EnableRefExpFcnMdlSchedulingChecks on
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelDependencies	  ""
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel on
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  19
+	  Version		  "1.18.1"
+	  DisabledProps		  []
+	  Description		  ""
+	  Components		  []
+	  SimCustomSourceCode	  ""
+	  SimCustomHeaderCode	  ""
+	  SimCustomInitializer	  ""
+	  SimCustomTerminator	  ""
+	  SimReservedNameArray	  []
+	  SimUserSources	  ""
+	  SimUserIncludeDirs	  ""
+	  SimUserLibraries	  ""
+	  SimUserDefines	  ""
+	  SimCustomCompilerFlags  ""
+	  SimCustomLinkerFlags	  ""
+	  SFSimEcho		  on
+	  SimCtrlC		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  on
+	  SimParseCustomCode	  on
+	  SimAnalyzeCustomCode	  off
+	  SimGenImportedTypeDefs  off
+	  ModelFunctionsGlobalVisibility "on"
+	  CompileTimeRecursionLimit 50
+	  EnableRuntimeRecursion  on
+	  MATLABDynamicMemAlloc	  on
+	  MATLABDynamicMemAllocThreshold 65536
+	  CustomCodeFunctionArrayLayout	[]
+	  DefaultCustomCodeFunctionArrayLayout "NotSpecified"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  20
+	  Version		  "1.18.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    16
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "PortableWordSizes"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    Cell		    "GenerateMissedCodeReplacementReport"
+	    Cell		    "GenerateErtSFunction"
+	    Cell		    "CreateSILPILBlock"
+	    Cell		    "CodeExecutionProfiling"
+	    Cell		    "CodeProfilingSaveOptions"
+	    Cell		    "CodeProfilingInstrumentation"
+	    PropName		    "DisabledProps"
+	  }
+	  Description		  ""
+	  SystemTargetFile	  "grt.tlc"
+	  HardwareBoard		  "None"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  PackageName		  ""
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  GenerateReport	  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  RTWBuildHooks		  []
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  RTWUseLocalCustomCode	  on
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomDefine		  ""
+	  CustomBLASCallback	  ""
+	  CustomLAPACKCallback	  ""
+	  CustomFFTCallback	  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  CustomToolchainOptions  []
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation "off"
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  GenerateMissedCodeReplacementReport off
+	  RTWCompilerOptimization "off"
+	  ObjectivePriorities	  []
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      21
+	      Version		      "1.18.1"
+	      Array {
+		Type			"Cell"
+		Dimension		28
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"BlockCommentType"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InternalIdentifier"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrModelFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"CustomSymbolStrUtil"
+		Cell			"CustomSymbolStrEmxType"
+		Cell			"CustomSymbolStrEmxFcn"
+		Cell			"CustomUserTokenString"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      Description	      ""
+	      Components	      []
+	      Comment		      ""
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      CommentStyle	      "Auto"
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      MangleLength	      1
+	      SharedChecksumLength    8
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrModelFcn "$R$N"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      CustomSymbolStrEmxType  "emxArray_$M$N"
+	      CustomSymbolStrEmxFcn   "emx$M$N"
+	      CustomUserTokenString   ""
+	      CustomCommentsFcn	      ""
+	      DefineNamingRule	      "None"
+	      DefineNamingFcn	      ""
+	      ParamNamingRule	      "None"
+	      ParamNamingFcn	      ""
+	      SignalNamingRule	      "None"
+	      SignalNamingFcn	      ""
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      BlockCommentType	      "BlockPathComment"
+	      StateflowObjectComments off
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifierFile  ""
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	      ReservedNameArray	      []
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      22
+	      Version		      "1.18.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"ExistingSharedCode"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"GenerateAllocFcn"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"RemoveDisableFunc"
+		Cell			"RemoveResetFunc"
+		Cell			"PreserveStateflowLocalDataDimensions"
+		PropName		"DisabledProps"
+	      }
+	      Description	      ""
+	      Components	      []
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "NOT IN USE"
+	      TargetLangStandard      "C99 (ISO)"
+	      CodeReplacementLibrary  "None"
+	      UtilityFuncGeneration   "Auto"
+	      MultiwordTypeDef	      "System defined"
+	      MultiwordLength	      2048
+	      DynamicStringBufferSize 256
+	      GenerateFullHeader      on
+	      InferredTypesCompatibility off
+	      ExistingSharedCode      ""
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      GroupInternalDataByFunction off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      CodeInterfacePackaging  "Nonreusable function"
+	      PurelyIntegerCode	      off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      RemoveDisableFunc	      off
+	      RemoveResetFunc	      off
+	      SupportVariableSizeSignals off
+	      ParenthesesLevel	      "Nominal"
+	      CastingMode	      "Nominal"
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      MDXCompliant	      off
+	      GRTInterface	      off
+	      GenerateAllocFcn	      off
+	      UseToolchainInfoCompliant	on
+	      GenerateSharedConstants on
+	      CoderGroups	      []
+	      AccessMethods	      []
+	      LookupTableObjectStructAxisOrder "1,2,3,4,..."
+	      LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
+	      LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
+	      ArrayLayout	      "Column-major"
+	      UnsupportedSFcnMsg      "error"
+	      ERTHeaderFileRootName   "$R$E"
+	      ERTSourceFileRootName   "$R$E"
+	      ERTDataFileRootName     "$R_data"
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeMexArgs	      ""
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	      MultiInstanceErrorCode  "Error"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	SlCovCC.ConfigComp {
+	  $ObjectID		  23
+	  Version		  "1.18.1"
+	  DisabledProps		  []
+	  Description		  "Simulink Coverage Configuration Component"
+	  Components		  []
+	  Name			  "Simulink Coverage"
+	  CovEnable		  off
+	  CovScope		  "EntireSystem"
+	  CovIncludeTopModel	  on
+	  RecordCoverage	  off
+	  CovPath		  "/"
+	  CovSaveName		  "covdata"
+	  CovCompData		  ""
+	  CovMetricSettings	  "dwe"
+	  CovFilter		  ""
+	  CovHTMLOptions	  ""
+	  CovNameIncrementing	  off
+	  CovForceBlockReductionOff on
+	  CovEnableCumulative	  on
+	  CovSaveCumulativeToWorkspaceVar off
+	  CovSaveSingleToWorkspaceVar off
+	  CovCumulativeVarName	  "covCumulativeData"
+	  CovCumulativeReport	  off
+	  CovSaveOutputData	  on
+	  CovOutputDir		  "slcov_output/$ModelName$"
+	  CovDataFileName	  "$ModelName$_cvdata"
+	  CovReportOnPause	  on
+	  CovModelRefEnable	  "off"
+	  CovModelRefExcluded	  ""
+	  CovExternalEMLEnable	  on
+	  CovSFcnEnable		  on
+	  CovBoundaryAbsTol	  1e-05
+	  CovBoundaryRelTol	  0.01
+	  CovUseTimeInterval	  off
+	  CovStartTime		  0
+	  CovStopTime		  0
+	  CovMcdcMode		  "Masking"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    [ 170, 78, 1070, 788 ]
+      ExtraOptions	      ""
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    12
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    24
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+  }
+  ExplicitPartitioning	  off
+  WSMdlFileData		  "DataTag0"
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    HideAutomaticName	    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "left"
+    VerticalAlignment	    "top"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    MarkupType		    "model"
+    UseDisplayTextAsClickCallback off
+    AnnotationType	    "note_annotation"
+    FixedHeight		    off
+    FixedWidth		    off
+    Interpreter		    "off"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "opaque"
+    RunInitForIconRedraw    "analyze"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "bar"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      IconDisplay	      "Port number"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      WrapState		      off
+      WrappedStateUpperValue  "pi"
+      WrappedStateLowerValue  "-pi"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      IconDisplay	      "Port number"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      Unit		      "inherit"
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      EnsureOutportIsVirtual  off
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+      MustResolveToSignalObject	off
+      OutputWhenUnConnected   off
+      OutputWhenUnconnectedValue "0"
+      VectorParamsAs1DForOutWhenUnconnected on
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      MultiThreadCoSim	      "auto"
+    }
+    Block {
+      BlockType		      Scope
+      DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
+      SFBlockType	      "NONE"
+      Variant		      off
+      VariantControlMode      "expression"
+      GeneratePreprocessorConditionals off
+      AllowZeroVariantControls off
+      PropagateVariantConditions off
+      TreatAsGroupedWhenPropagatingVariantConditions on
+      ContentPreviewEnabled   off
+      IsWebBlock	      off
+      Latency		      "0"
+      AutoFrameSizeCalculation off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "round"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      off
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "SMC_Maglev"
+    Location		    [-7, -7, 1543, 871]
+    Open		    off
+    PortBlocksUseCompactNotation off
+    SetExecutionDomain	    off
+    ExecutionDomainType	    "Deduce"
+    ModelBrowserVisibility  on
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "120"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "60"
+    Block {
+      BlockType		      Scope
+      Name		      "Comparison of the performance\nof the 3 Controllers"
+      SID		      "60"
+      Ports		      [3]
+      Position		      [730, 163, 760, 197]
+      ZOrder		      320
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData6'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','0.00833','MaxYLimReal','0.01907','YLabelReal','','MinYLimMag'"
+      ",'0.00833','MaxYLimMag','0.01907','LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesCo"
+      "lor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666"
+      "666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372"
+      "549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0"
+      ".650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',"
+      "3,'LineNames',{{'Magnetic Levitation System with Static SCM/1','Magnetic Levitation System with Dynamic SCM/1','"
+      "Magnetic Levitation System with Modified Dynamic SCM/1'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDef"
+      "aults',struct('MinYLimReal','0.00833','MaxYLimReal','0.01907','YLabelReal','','MinYLimMag','0.00833','MaxYLimMag"
+      "','0.01907','LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTick"
+      "Color',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.62352941176470"
+      "6 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.39215686"
+      "2745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),ex"
+      "tmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),extmgr.Configurat"
+      "ion('Tools','Measurements',true,'Version','2021a')),'Version','2021a','Position',[786.6 145.8 560 420])"
+      NumInputPorts	      "3"
+      Floating		      off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Magnetic Levitation System\nwith Dynamic SCM"
+      SID		      "24"
+      Ports		      [1, 2]
+      Position		      [420, 184, 475, 291]
+      ZOrder		      315
+      RequestExecContextInheritance off
+      ContentPreviewEnabled   on
+      System {
+	Name			"Magnetic Levitation System\nwith Dynamic SCM"
+	Location		[-7, -7, 1543, 871]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"175"
+	Block {
+	  BlockType		  Inport
+	  Name			  "p_des"
+	  SID			  "25"
+	  Position		  [105, 48, 135, 62]
+	  ZOrder		  308
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "26"
+	  Position		  [105, 150, 135, 180]
+	  ZOrder		  10
+	  Value			  "g"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "27"
+	  Position		  [205, 160, 235, 190]
+	  ZOrder		  8
+	  Gain			  "(m/C)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  SID			  "28"
+	  Ports			  [1, 1]
+	  Position		  [540, 15, 570, 45]
+	  ZOrder		  2
+	  InitialCondition	  "0.008"
+	  Port {
+	    PortNumber		    1
+	    Name		    "z1"
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  SID			  "29"
+	  Ports			  [1, 1]
+	  Position		  [540, 50, 570, 80]
+	  ZOrder		  3
+	  Port {
+	    PortNumber		    1
+	    Name		    "z2"
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  SID			  "30"
+	  Ports			  [1, 1]
+	  Position		  [540, 85, 570, 115]
+	  ZOrder		  4
+	  InitialCondition	  "9"
+	  Port {
+	    PortNumber		    1
+	    Name		    "z3"
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator3"
+	  SID			  "41"
+	  Ports			  [1, 1]
+	  Position		  [540, 155, 570, 185]
+	  ZOrder		  311
+	  InitialCondition	  "20"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "31"
+	  Ports			  [2, 1]
+	  Position		  [270, 152, 300, 183]
+	  ZOrder		  304
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "SMC with Dynamic Control + Plant"
+	  SID			  "32"
+	  Ports			  [5, 5]
+	  Position		  [405, 10, 510, 190]
+	  ZOrder		  1
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  ContentPreviewEnabled	  on
+	  System {
+	    Name		    "SMC with Dynamic Control + Plant"
+	    Location		    [223, 338, 826, 833]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "29"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p_des"
+	      SID		      "32::28"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      19
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "32::1"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      -1
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v"
+	      SID		      "32::22"
+	      Position		      [20, 171, 40, 189]
+	      ZOrder		      13
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "i"
+	      SID		      "32::23"
+	      Position		      [20, 206, 40, 224]
+	      ZOrder		      14
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "u"
+	      SID		      "32::29"
+	      Position		      [20, 246, 40, 264]
+	      ZOrder		      20
+	      Port		      "5"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "32::20"
+	      Ports		      [1, 1]
+	      Position		      [270, 315, 320, 355]
+	      ZOrder		      11
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "32::19"
+	      Tag		      "Stateflow S-Function SMC_Maglev 1"
+	      Ports		      [5, 6]
+	      Position		      [180, 107, 230, 248]
+	      ZOrder		      10
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[5 6]"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      on
+	      SFcnIsStateOwnerBlock   off
+	      Port {
+		PortNumber		2
+		Name			"z1_dot"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"z2_dot"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"z3_dot"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"y"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"u_dot"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "32::21"
+	      Position		      [460, 326, 480, 344]
+	      ZOrder		      12
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "z1_dot"
+	      SID		      "32::24"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      15
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "z2_dot"
+	      SID		      "32::25"
+	      Position		      [460, 136, 480, 154]
+	      ZOrder		      16
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "z3_dot"
+	      SID		      "32::26"
+	      Position		      [460, 171, 480, 189]
+	      ZOrder		      17
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "32::5"
+	      Position		      [460, 206, 480, 224]
+	      ZOrder		      -5
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "u_dot"
+	      SID		      "32::27"
+	      Position		      [460, 246, 480, 264]
+	      ZOrder		      18
+	      Port		      "5"
+	    }
+	    Line {
+	      ZOrder		      12
+	      SrcBlock		      "p_des"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      13
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      "v"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      15
+	      SrcBlock		      "i"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      16
+	      SrcBlock		      "u"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "z1_dot"
+	      ZOrder		      17
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "z1_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "z2_dot"
+	      ZOrder		      18
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      3
+	      DstBlock		      "z2_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "z3_dot"
+	      ZOrder		      19
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      4
+	      DstBlock		      "z3_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "y"
+	      ZOrder		      20
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      5
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "u_dot"
+	      ZOrder		      21
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      6
+	      DstBlock		      "u_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      22
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      23
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Subtract"
+	  SID			  "33"
+	  Ports			  [2, 1]
+	  Position		  [155, 157, 185, 188]
+	  ZOrder		  9
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "34"
+	  Ports			  [2, 1]
+	  Position		  [310, 45, 330, 65]
+	  ZOrder		  6
+	  NamePlacement		  "alternate"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "35"
+	  Ports			  [2, 1]
+	  Position		  [640, 125, 660, 145]
+	  ZOrder		  307
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p"
+	  SID			  "36"
+	  Position		  [725, 128, 755, 142]
+	  ZOrder		  309
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  SID			  "37"
+	  Position		  [725, 163, 755, 177]
+	  ZOrder		  310
+	  Port			  "2"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [57, 0; 0, -35]
+	  DstBlock		  "SMC with Dynamic Control + Plant"
+	  DstPort		  4
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [33, 0; 0, 10]
+	  DstBlock		  "SMC with Dynamic Control + Plant"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "p_des"
+	  SrcPort		  1
+	  Points		  [103, 0]
+	  Branch {
+	    ZOrder		    4
+	    Points		    [0, 105]
+	    Branch {
+	      ZOrder		      5
+	      Points		      [0, 86; 407, 0]
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Branch {
+	      ZOrder		      6
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    ZOrder		    7
+	    Points		    [0, -25]
+	    DstBlock		    "SMC with Dynamic Control + Plant"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    8
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "SMC with Dynamic Control + Plant"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "SMC with Dynamic Control + Plant"
+	  SrcPort		  3
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z3"
+	  ZOrder		  11
+	  Labels		  [1, 1]
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [31, 0; 0, 135; -466, 0]
+	  DstBlock		  "Subtract"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  12
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  13
+	  SrcBlock		  "SMC with Dynamic Control + Plant"
+	  SrcPort		  2
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  14
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "p"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  15
+	  SrcBlock		  "Subtract"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z2"
+	  ZOrder		  16
+	  Labels		  [1, 1]
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [19, 0; 0, -79; -207, 0; 0, 114]
+	  DstBlock		  "SMC with Dynamic Control + Plant"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  17
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Subtract"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z1"
+	  ZOrder		  18
+	  Labels		  [1, 1]
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [52, 0; 0, 195; -307, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  19
+	  SrcBlock		  "SMC with Dynamic Control + Plant"
+	  SrcPort		  4
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  22
+	  SrcBlock		  "SMC with Dynamic Control + Plant"
+	  SrcPort		  5
+	  DstBlock		  "Integrator3"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  23
+	  SrcBlock		  "Integrator3"
+	  SrcPort		  1
+	  Points		  [11, 0]
+	  Branch {
+	    ZOrder		    25
+	    Points		    [0, 48; -210, 0; 0, -48]
+	    DstBlock		    "SMC with Dynamic Control + Plant"
+	    DstPort		    5
+	  }
+	  Branch {
+	    ZOrder		    24
+	    DstBlock		    "u"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Magnetic Levitation System\nwith Modified Dynamic SCM"
+      SID		      "42"
+      Ports		      [1, 2]
+      Position		      [420, 369, 475, 476]
+      ZOrder		      319
+      RequestExecContextInheritance off
+      ContentPreviewEnabled   on
+      System {
+	Name			"Magnetic Levitation System\nwith Modified Dynamic SCM"
+	Location		[-7, -7, 1543, 871]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"150"
+	Block {
+	  BlockType		  Inport
+	  Name			  "p_des"
+	  SID			  "43"
+	  Position		  [105, 43, 135, 57]
+	  ZOrder		  308
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "44"
+	  Position		  [105, 110, 135, 140]
+	  ZOrder		  10
+	  Value			  "g"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "45"
+	  Position		  [205, 120, 235, 150]
+	  ZOrder		  8
+	  Gain			  "(m/C)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  SID			  "46"
+	  Ports			  [1, 1]
+	  Position		  [540, -15, 570, 15]
+	  ZOrder		  2
+	  InitialCondition	  "0.008"
+	  Port {
+	    PortNumber		    1
+	    Name		    "z1"
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  SID			  "47"
+	  Ports			  [1, 1]
+	  Position		  [540, 20, 570, 50]
+	  ZOrder		  3
+	  Port {
+	    PortNumber		    1
+	    Name		    "z2"
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  SID			  "48"
+	  Ports			  [1, 1]
+	  Position		  [540, 55, 570, 85]
+	  ZOrder		  4
+	  InitialCondition	  "9"
+	  Port {
+	    PortNumber		    1
+	    Name		    "z3"
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator3"
+	  SID			  "59"
+	  Ports			  [1, 1]
+	  Position		  [665, 160, 695, 190]
+	  ZOrder		  311
+	  Port {
+	    PortNumber		    1
+	    Name		    "z3"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "49"
+	  Ports			  [2, 1]
+	  Position		  [270, 112, 300, 143]
+	  ZOrder		  304
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "SMC with Modified Dynamic Control + Plant"
+	  SID			  "50"
+	  Ports			  [5, 6]
+	  Position		  [405, -15, 510, 190]
+	  ZOrder		  1
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  ContentPreviewEnabled	  on
+	  System {
+	    Name		    "SMC with Modified Dynamic Control + Plant"
+	    Location		    [223, 338, 826, 833]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "30"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p_des"
+	      SID		      "50::28"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      19
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "50::1"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      -1
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v"
+	      SID		      "50::22"
+	      Position		      [20, 171, 40, 189]
+	      ZOrder		      13
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "i"
+	      SID		      "50::23"
+	      Position		      [20, 206, 40, 224]
+	      ZOrder		      14
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "w"
+	      SID		      "50::29"
+	      Position		      [20, 246, 40, 264]
+	      ZOrder		      20
+	      Port		      "5"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "50::20"
+	      Ports		      [1, 1]
+	      Position		      [270, 350, 320, 390]
+	      ZOrder		      11
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "50::19"
+	      Tag		      "Stateflow S-Function SMC_Maglev 3"
+	      Ports		      [5, 7]
+	      Position		      [180, 110, 230, 270]
+	      ZOrder		      10
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[5 7]"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      on
+	      SFcnIsStateOwnerBlock   off
+	      Port {
+		PortNumber		2
+		Name			"z1_dot"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"z2_dot"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"z3_dot"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"y"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"u"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"w_dot"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "50::21"
+	      Position		      [460, 361, 480, 379]
+	      ZOrder		      12
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "z1_dot"
+	      SID		      "50::24"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      15
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "z2_dot"
+	      SID		      "50::25"
+	      Position		      [460, 136, 480, 154]
+	      ZOrder		      16
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "z3_dot"
+	      SID		      "50::26"
+	      Position		      [460, 171, 480, 189]
+	      ZOrder		      17
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "50::5"
+	      Position		      [460, 206, 480, 224]
+	      ZOrder		      -5
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "u"
+	      SID		      "50::27"
+	      Position		      [460, 246, 480, 264]
+	      ZOrder		      18
+	      Port		      "5"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "w_dot"
+	      SID		      "50::30"
+	      Position		      [460, 281, 480, 299]
+	      ZOrder		      21
+	      Port		      "6"
+	    }
+	    Line {
+	      ZOrder		      24
+	      SrcBlock		      "p_des"
+	      SrcPort		      1
+	      Points		      [67, 0; 0, 20]
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      25
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, 15]
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      26
+	      SrcBlock		      "v"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, 10]
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      27
+	      SrcBlock		      "i"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, 5]
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      28
+	      SrcBlock		      "w"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -5]
+	      DstBlock		      " SFunction "
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "z1_dot"
+	      ZOrder		      29
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      Points		      [81, 0; 0, -40]
+	      DstBlock		      "z1_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "z2_dot"
+	      ZOrder		      30
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      3
+	      Points		      [108, 0; 0, -25]
+	      DstBlock		      "z2_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "z3_dot"
+	      ZOrder		      31
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      4
+	      Points		      [134, 0; 0, -10]
+	      DstBlock		      "z3_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "y"
+	      ZOrder		      32
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      5
+	      Points		      [134, 0; 0, 5]
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "u"
+	      ZOrder		      33
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      6
+	      Points		      [108, 0; 0, 25]
+	      DstBlock		      "u"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "w_dot"
+	      ZOrder		      34
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      7
+	      Points		      [81, 0; 0, 40]
+	      DstBlock		      "w_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      35
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      36
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      Points		      [16, 0; 0, 240]
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Subtract"
+	  SID			  "51"
+	  Ports			  [2, 1]
+	  Position		  [155, 117, 185, 148]
+	  ZOrder		  9
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "52"
+	  Ports			  [2, 1]
+	  Position		  [310, 40, 330, 60]
+	  ZOrder		  6
+	  NamePlacement		  "alternate"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "53"
+	  Ports			  [2, 1]
+	  Position		  [640, 95, 660, 115]
+	  ZOrder		  307
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p"
+	  SID			  "54"
+	  Position		  [725, 98, 755, 112]
+	  ZOrder		  309
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  SID			  "55"
+	  Position		  [725, 133, 755, 147]
+	  ZOrder		  310
+	  Port			  "2"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "SMC with Modified Dynamic Control + Plant"
+	  DstPort		  4
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "SMC with Modified Dynamic Control + Plant"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "p_des"
+	  SrcPort		  1
+	  Points		  [103, 0]
+	  Branch {
+	    ZOrder		    24
+	    Points		    [0, 70]
+	    Branch {
+	      ZOrder		      23
+	      Points		      [0, 110; 407, 0]
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Branch {
+	      ZOrder		      6
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    ZOrder		    7
+	    Points		    [0, -40]
+	    DstBlock		    "SMC with Modified Dynamic Control + Plant"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    8
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "SMC with Modified Dynamic Control + Plant"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "SMC with Modified Dynamic Control + Plant"
+	  SrcPort		  3
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z3"
+	  ZOrder		  11
+	  Labels		  [1, 1]
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 152; -446, 0; 0, -82]
+	  DstBlock		  "Subtract"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  12
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  13
+	  SrcBlock		  "SMC with Modified Dynamic Control + Plant"
+	  SrcPort		  2
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  14
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "p"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  15
+	  SrcBlock		  "Subtract"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z2"
+	  ZOrder		  16
+	  Labels		  [1, 1]
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [41, 0; 0, -74; -229, 0; 0, 129]
+	  DstBlock		  "SMC with Modified Dynamic Control + Plant"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  17
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Subtract"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z1"
+	  ZOrder		  18
+	  Labels		  [1, 1]
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [26, 0; 0, 216; -281, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  19
+	  SrcBlock		  "SMC with Modified Dynamic Control + Plant"
+	  SrcPort		  4
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  20
+	  SrcBlock		  "SMC with Modified Dynamic Control + Plant"
+	  SrcPort		  5
+	  DstBlock		  "u"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  21
+	  SrcBlock		  "SMC with Modified Dynamic Control + Plant"
+	  SrcPort		  6
+	  DstBlock		  "Integrator3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z3"
+	  ZOrder		  22
+	  Labels		  [0, 0]
+	  SrcBlock		  "Integrator3"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 34; -378, 0; 0, -39]
+	  DstBlock		  "SMC with Modified Dynamic Control + Plant"
+	  DstPort		  5
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Magnetic Levitation System\nwith Static SCM"
+      SID		      "19"
+      Ports		      [1, 2]
+      Position		      [420, 4, 475, 111]
+      ZOrder		      311
+      RequestExecContextInheritance off
+      ContentPreviewEnabled   on
+      System {
+	Name			"Magnetic Levitation System\nwith Static SCM"
+	Location		[-7, -7, 1543, 871]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	on
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"150"
+	Block {
+	  BlockType		  Inport
+	  Name			  "p_des"
+	  SID			  "20"
+	  Position		  [105, 48, 135, 62]
+	  ZOrder		  308
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "10"
+	  Position		  [105, 150, 135, 180]
+	  ZOrder		  10
+	  Value			  "g"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  SID			  "8"
+	  Position		  [205, 160, 235, 190]
+	  ZOrder		  8
+	  Gain			  "(m/C)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  SID			  "2"
+	  Ports			  [1, 1]
+	  Position		  [540, 15, 570, 45]
+	  ZOrder		  2
+	  InitialCondition	  "0.008"
+	  Port {
+	    PortNumber		    1
+	    Name		    "z1"
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  SID			  "3"
+	  Ports			  [1, 1]
+	  Position		  [540, 50, 570, 80]
+	  ZOrder		  3
+	  Port {
+	    PortNumber		    1
+	    Name		    "z2"
+	  }
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  SID			  "4"
+	  Ports			  [1, 1]
+	  Position		  [540, 85, 570, 115]
+	  ZOrder		  4
+	  InitialCondition	  "9"
+	  Port {
+	    PortNumber		    1
+	    Name		    "z3"
+	  }
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "12"
+	  Ports			  [2, 1]
+	  Position		  [270, 152, 300, 183]
+	  ZOrder		  304
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "SMC with Static Control + Plant"
+	  SID			  "1"
+	  Ports			  [4, 5]
+	  Position		  [405, 10, 510, 190]
+	  ZOrder		  1
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  ContentPreviewEnabled	  on
+	  System {
+	    Name		    "SMC with Static Control + Plant"
+	    Location		    [223, 338, 826, 833]
+	    Open		    off
+	    PortBlocksUseCompactNotation off
+	    SetExecutionDomain	    off
+	    ExecutionDomainType	    "Deduce"
+	    ModelBrowserVisibility  on
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "28"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p_des"
+	      SID		      "1::28"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      19
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "1::1"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      -1
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v"
+	      SID		      "1::22"
+	      Position		      [20, 171, 40, 189]
+	      ZOrder		      13
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "i"
+	      SID		      "1::23"
+	      Position		      [20, 206, 40, 224]
+	      ZOrder		      14
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "1::20"
+	      Ports		      [1, 1]
+	      Position		      [270, 315, 320, 355]
+	      ZOrder		      11
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "1::19"
+	      Tag		      "Stateflow S-Function SMC_Maglev 2"
+	      Ports		      [4, 6]
+	      Position		      [180, 107, 230, 248]
+	      ZOrder		      10
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[4 6]"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      on
+	      SFcnIsStateOwnerBlock   off
+	      Port {
+		PortNumber		2
+		Name			"z1_dot"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"z2_dot"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"z3_dot"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"y"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"u"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "1::21"
+	      Position		      [460, 326, 480, 344]
+	      ZOrder		      12
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "z1_dot"
+	      SID		      "1::24"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      15
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "z2_dot"
+	      SID		      "1::25"
+	      Position		      [460, 136, 480, 154]
+	      ZOrder		      16
+	      Port		      "2"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "z3_dot"
+	      SID		      "1::26"
+	      Position		      [460, 171, 480, 189]
+	      ZOrder		      17
+	      Port		      "3"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y"
+	      SID		      "1::5"
+	      Position		      [460, 206, 480, 224]
+	      ZOrder		      -5
+	      Port		      "4"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "u"
+	      SID		      "1::27"
+	      Position		      [460, 246, 480, 264]
+	      ZOrder		      18
+	      Port		      "5"
+	    }
+	    Line {
+	      ZOrder		      89
+	      SrcBlock		      "p_des"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      90
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      91
+	      SrcBlock		      "v"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      92
+	      SrcBlock		      "i"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "z1_dot"
+	      ZOrder		      93
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "z1_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "z2_dot"
+	      ZOrder		      94
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      3
+	      DstBlock		      "z2_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "z3_dot"
+	      ZOrder		      95
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      4
+	      DstBlock		      "z3_dot"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "y"
+	      ZOrder		      96
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      5
+	      DstBlock		      "y"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "u"
+	      ZOrder		      97
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      6
+	      DstBlock		      "u"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      98
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      99
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Subtract"
+	  SID			  "9"
+	  Ports			  [2, 1]
+	  Position		  [155, 157, 185, 188]
+	  ZOrder		  9
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "6"
+	  Ports			  [2, 1]
+	  Position		  [310, 45, 330, 65]
+	  ZOrder		  6
+	  NamePlacement		  "alternate"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  SID			  "15"
+	  Ports			  [2, 1]
+	  Position		  [640, 125, 660, 145]
+	  ZOrder		  307
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "p"
+	  SID			  "21"
+	  Position		  [725, 128, 755, 142]
+	  ZOrder		  309
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  SID			  "22"
+	  Position		  [725, 163, 755, 177]
+	  ZOrder		  310
+	  Port			  "2"
+	}
+	Line {
+	  ZOrder		  33
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "SMC with Static Control + Plant"
+	  DstPort		  4
+	}
+	Line {
+	  ZOrder		  22
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [33, 0; 0, 25]
+	  DstBlock		  "SMC with Static Control + Plant"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  52
+	  SrcBlock		  "p_des"
+	  SrcPort		  1
+	  Points		  [103, 0]
+	  Branch {
+	    ZOrder		    51
+	    Points		    [0, 105]
+	    Branch {
+	      ZOrder		      55
+	      Points		      [0, 86; 407, 0]
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Branch {
+	      ZOrder		      41
+	      DstBlock		      "Product"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    ZOrder		    50
+	    Points		    [0, -20]
+	    DstBlock		    "SMC with Static Control + Plant"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    48
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  6
+	  SrcBlock		  "SMC with Static Control + Plant"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "SMC with Static Control + Plant"
+	  SrcPort		  3
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z3"
+	  ZOrder		  27
+	  Labels		  [1, 1]
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [31, 0; 0, 135; -466, 0]
+	  DstBlock		  "Subtract"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  30
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  8
+	  SrcBlock		  "SMC with Static Control + Plant"
+	  SrcPort		  2
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  53
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "p"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  28
+	  SrcBlock		  "Subtract"
+	  SrcPort		  1
+	  DstBlock		  "Gain"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z2"
+	  ZOrder		  32
+	  Labels		  [1, 1]
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [41, 0; 0, 159; -229, 0; 0, -99]
+	  DstBlock		  "SMC with Static Control + Plant"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  29
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Subtract"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "z1"
+	  ZOrder		  20
+	  Labels		  [1, 1]
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [52, 0; 0, 181; -307, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  44
+	  SrcBlock		  "SMC with Static Control + Plant"
+	  SrcPort		  4
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  54
+	  SrcBlock		  "SMC with Static Control + Plant"
+	  SrcPort		  5
+	  DstBlock		  "u"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "applied voltage"
+      SID		      "14"
+      Ports		      [1]
+      Position		      [525, 64, 555, 96]
+      ZOrder		      306
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','2.73557','MaxYLimReal','20.31509','YLabelReal','','MinYLimMag"
+      "','2.73557','MaxYLimMag','20.31509','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axe"
+      "sColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666"
+      "666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831"
+      "372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.074509803921568"
+      "6 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLine"
+      "s',1,'LineNames',{{'Magnetic Levitation System with Static SCM/u'}},'ShowContent',true,'Placement',1)},'DisplayP"
+      "ropertyDefaults',struct('MinYLimReal','2.73557','MaxYLimReal','20.31509','YLabelReal','','MinYLimMag','2.73557',"
+      "'MaxYLimMag','20.31509','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0"
+      " 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.6"
+      "23529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569"
+      " 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.65098039"
+      "2156863])),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),extm"
+      "gr.Configuration('Tools','Measurements',true,'Version','2021a')),'Version','2021a','Position',[1 1 1536 788.8])"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "applied voltage1"
+      SID		      "38"
+      Ports		      [1]
+      Position		      [525, 249, 555, 281]
+      ZOrder		      314
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData2'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','6.69412','MaxYLimReal','21.47843','YLabelReal','','MinYLimMag"
+      "','6.69412','MaxYLimMag','21.47843','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axe"
+      "sColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666"
+      "666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831"
+      "372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.074509803921568"
+      "6 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLine"
+      "s',1,'LineNames',{{'Magnetic Levitation System with Dynamic SCM/2'}},'ShowContent',true,'Placement',1)},'Display"
+      "PropertyDefaults',struct('MinYLimReal','6.69412','MaxYLimReal','21.47843','YLabelReal','','MinYLimMag','6.69412'"
+      ",'MaxYLimMag','21.47843','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 "
+      "0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0."
+      "623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.27450980392156"
+      "9 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.6509803"
+      "92156863])),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),ext"
+      "mgr.Configuration('Tools','Measurements',true,'Version','2021a')),'Version','2021a')"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "applied voltage2"
+      SID		      "56"
+      Ports		      [1]
+      Position		      [525, 434, 555, 466]
+      ZOrder		      318
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData4'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','7.17984','MaxYLimReal','17.53926','YLabelReal','','MinYLimMag"
+      "','7.17984','MaxYLimMag','17.53926','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axe"
+      "sColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666"
+      "666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831"
+      "372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.074509803921568"
+      "6 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLine"
+      "s',1,'LineNames',{{'Magnetic Levitation System with Modified Dynamic SCM/u'}},'ShowContent',true,'Placement',1)}"
+      ",'DisplayPropertyDefaults',struct('MinYLimReal','7.17984','MaxYLimReal','17.53926','YLabelReal','','MinYLimMag',"
+      "'7.17984','MaxYLimMag','17.53926','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesC"
+      "olor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039"
+      "215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.27450"
+      "9803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 "
+      "0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale',"
+      "'XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2021a')),'Version','2021a')"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "desired position"
+      SID		      "13"
+      Position		      [315, 40, 345, 70]
+      ZOrder		      305
+      Value		      "0.01"
+      Port {
+	PortNumber		1
+	Name			"p_des"
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "desired position1"
+      SID		      "39"
+      Position		      [315, 225, 345, 255]
+      ZOrder		      313
+      Value		      "0.01"
+      Port {
+	PortNumber		1
+	Name			"p_des"
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "desired position2"
+      SID		      "57"
+      Position		      [315, 410, 345, 440]
+      ZOrder		      317
+      Value		      "0.01"
+      Port {
+	PortNumber		1
+	Name			"p_des"
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "measured_position"
+      SID		      "5"
+      Ports		      [1]
+      Position		      [525, 14, 555, 46]
+      ZOrder		      5
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
+      "nYLimReal','0.00833','MaxYLimReal','0.01907','YLabelReal','','MinYLimMag','0.00833','MaxYLimMag','0.01907','Lege"
+      "ndVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274"
+      "509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6235294"
+      "11764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.7176470"
+      "58823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLab"
+      "el>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Magnetic Levitation S"
+      "ystem with Static SCM/1'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','0."
+      "00833','MaxYLimReal','0.01907','YLabelReal','','MinYLimMag','0.00833','MaxYLimMag','0.01907','LegendVisibility',"
+      "'off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.68"
+      "6274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.1607"
+      "8431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.07"
+      "45098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Pl"
+      "ot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',tru"
+      "e,'Version','2021a')),'Version','2021a','Position',[477.8 126.6 560 420])"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "measured_position1"
+      SID		      "40"
+      Ports		      [1]
+      Position		      [525, 194, 555, 226]
+      ZOrder		      312
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData3'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','0.00894','MaxYLimReal','0.01901','YLabelReal','','MinYLimMag'"
+      ",'0.00894','MaxYLimMag','0.01901','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesC"
+      "olor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066666"
+      "6666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.83137"
+      "2549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 "
+      "0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines'"
+      ",1,'LineNames',{{'Magnetic Levitation System with Dynamic SCM/1'}},'ShowContent',true,'Placement',1)},'DisplayPr"
+      "opertyDefaults',struct('MinYLimReal','0.00894','MaxYLimReal','0.01901','YLabelReal','','MinYLimMag','0.00894','M"
+      "axYLimMag','0.01901','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0]"
+      ",'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.6235"
+      "29411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;"
+      "0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.65098039215"
+      "6863])),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'),extmgr."
+      "Configuration('Tools','Measurements',true,'Measurements',struct('tcursors',struct('XCoordinates',[0.25 0.75],'YC"
+      "oordinates',[NaN NaN],'CursorChannels',[1 1],'WaveformCursors',true,'ShowHorizontal',false,'ShowVertical',true,'"
+      "LockCursorSpacing',false,'SnapToData',false,'SettingsPanelOpen',0,'MeasurementsPanelOpen',1)),'Version','2021a')"
+      "),'Version','2021a','Position',[542.6 160.2 560 420])"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "measured_position2"
+      SID		      "58"
+      Ports		      [1]
+      Position		      [525, 379, 555, 411]
+      ZOrder		      316
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData5'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','0.00895','MaxYLimReal','0.01901','YLabelReal','','MinYLimMag'"
+      ",'0.00895','MaxYLimMag','0.01901','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesC"
+      "olor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066666"
+      "6666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.83137"
+      "2549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 "
+      "0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines'"
+      ",1,'LineNames',{{'Magnetic Levitation System with Modified Dynamic SCM/1'}},'ShowContent',true,'Placement',1)},'"
+      "DisplayPropertyDefaults',struct('MinYLimReal','0.00895','MaxYLimReal','0.01901','YLabelReal','','MinYLimMag','0."
+      "00895','MaxYLimMag','0.01901','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor"
+      "',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.07450980392156"
+      "86 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803"
+      "921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.65"
+      "0980392156863])),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','XY'"
+      "),extmgr.Configuration('Tools','Measurements',true,'Version','2021a','Measurements',struct('tcursors',struct('XC"
+      "oordinates',[0.25 0.75],'YCoordinates',[NaN NaN],'CursorChannels',[1 1],'WaveformCursors',true,'ShowHorizontal',"
+      "false,'ShowVertical',true,'LockCursorSpacing',false,'SnapToData',false,'SettingsPanelOpen',0,'MeasurementsPanelO"
+      "pen',1)))),'Version','2021a')"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Line {
+      Name		      "p_des"
+      ZOrder		      56
+      Labels		      [1, 1]
+      SrcBlock		      "desired position"
+      SrcPort		      1
+      DstBlock		      "Magnetic Levitation System\nwith Static SCM"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      57
+      SrcBlock		      "Magnetic Levitation System\nwith Static SCM"
+      SrcPort		      1
+      Points		      [18, 0]
+      Branch {
+	ZOrder			66
+	Points			[0, -40; 158, 0; 0, 180]
+	DstBlock		"Comparison of the performance\nof the 3 Controllers"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			65
+	DstBlock		"measured_position"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      58
+      SrcBlock		      "Magnetic Levitation System\nwith Static SCM"
+      SrcPort		      2
+      DstBlock		      "applied voltage"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      59
+      SrcBlock		      "Magnetic Levitation System\nwith Dynamic SCM"
+      SrcPort		      2
+      DstBlock		      "applied voltage1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      60
+      SrcBlock		      "Magnetic Levitation System\nwith Dynamic SCM"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	ZOrder			68
+	Points			[0, -30]
+	DstBlock		"Comparison of the performance\nof the 3 Controllers"
+	DstPort			2
+      }
+      Branch {
+	ZOrder			67
+	DstBlock		"measured_position1"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "p_des"
+      ZOrder		      61
+      Labels		      [1, 1]
+      SrcBlock		      "desired position1"
+      SrcPort		      1
+      DstBlock		      "Magnetic Levitation System\nwith Dynamic SCM"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      62
+      SrcBlock		      "Magnetic Levitation System\nwith Modified Dynamic SCM"
+      SrcPort		      2
+      DstBlock		      "applied voltage2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      63
+      SrcBlock		      "Magnetic Levitation System\nwith Modified Dynamic SCM"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	ZOrder			70
+	Points			[0, -48; 160, 0; 0, -157]
+	DstBlock		"Comparison of the performance\nof the 3 Controllers"
+	DstPort			3
+      }
+      Branch {
+	ZOrder			69
+	DstBlock		"measured_position2"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "p_des"
+      ZOrder		      64
+      Labels		      [1, 1]
+      SrcBlock		      "desired position2"
+      SrcPort		      1
+      DstBlock		      "Magnetic Levitation System\nwith Modified Dynamic SCM"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    L $   8    (     @         %    \"     $    #     0         %  0 !@    $    ,    3F%M90"
+    "  5F%L=64       X    P    !@    @    $          4    (     0    $    !         !   0!#    #@   #@    &    \"     8"
+    "         !0    @    !     0    $         \"0    @   #2^\\;7GEDB/PX    P    !@    @    $          4    (     0    $"
+    "    !         !   0!G    #@   #@    &    \"     8         !0    @    !     0    $         \"0    @    ?A>M1N)XC0 X"
+    "    P    !@    @    $          4    (     0    $    !         !   0!M    #@   #@    &    \"     8         !0    @ "
+    "   !     0    $         \"0    @   #M#;XPF2J(/P"
+  }
+}
+#Finite State Machines
+#
+#   Stateflow 80000041
+#
+#
+Stateflow {
+  machine {
+    id			    1
+    name		    "SMC_Maglev"
+    created		    "11-Dec-2021 01:30:00"
+    isLibrary		    0
+    sfVersion		    80000014
+    firstTarget		    47
+  }
+  chart {
+    id			    2
+    machine		    1
+    name		    "Magnetic Levitation System\nwith Dynamic SCM/SMC with Dynamic Control + Plant"
+    windowPosition	    [422 539.941 189 413]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 3600 1200 1.180555555555556]
+    treeNode		    [0 3 0 0]
+    viewObj		    2
+    ssIdHighWaterMark	    13
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    chartFileNumber	    1
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+    firstData		    4
+    firstTransition	    15
+    firstJunction	    14
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [z1_dot, z2_dot, z3_dot, y, u_dot]= fcn(p_des, p, v, i, u)\n\n%%\n% x1 = p (position)\n%"
+      " x2 = v (velocity)\n% x3 = i (current)\n% u = e (applied voltage)\n\ng = 9.81;\nC = 1.4*10^-4; \nR = 28.7;\nL1 ="
+      " 0.65;\nm = 11.87*10^-3;\n\ntau = 50000;\nm1 = 93;\nm2 = 2882;\nm3 = 29760;\n\nL = L1 + 2*C/p;\n\n% Defining Sta"
+      "te variables\nx1 = p;\nx2 = v;\nx3 = i;\nx1_des = p_des;\n\nz1 = x1 - x1_des;\nz2 = x2;                   % x2_d"
+      "es = 0\nz3 = g - (C/m)*(x3/x1)^2;   \n\nf1 = 2*(C/m)*((1 - 2*C/(L*x1))*x2*x3^2/x1^3 + (R/L)*(x3^2/x1^2));\ng1 = "
+      "-2*C*x3/(L*m*x1^2);\n\nf1_dot = 2*(C/m)*(-2*R^2*x3^2/(L^2*x1^2) + (g - 4*R*x2/L)*(x3^2/x1^3) + (10*R*C*x2/L^2 - "
+      "3*x2^2 - 2*C*g/L)*(x3^2/x1^4) + (12*C*x2^2/L - C*x3^2/m)*(x3^2/x1^5) + (2*C^2*x3^2/(L*m) - 12*C^2*x2^2/L^2)*(x3^"
+      "2/x1^6) + (2*x2/(L*x1) - 4*C*x2/(L^2*x1^2) + 2*R/L^2)*x3*u/x1^2);\ng1_dot = (-R/L -2*x2/x1 + 4*C*x2/(L*x1^2))*g1"
+      " - 2*C*u/(m*L^2*x1^2);\n\nu_dot = 1/g1*(-f1_dot - g1_dot*u - m1*(f1 + g1*u) - m2*z3 - m3*z2 - tau*sign(f1 + g1*u"
+      " + m1*z3 + m2*z2 + m3*z1)); % Control input : applied voltage\n\n% State space model in new coordinates. \nz1_do"
+      "t = z2;\nz2_dot = z3;\nz3_dot = f1 + g1*u;\n\ny = z1; % Output of state space model.\n"
+      editorLayout	      "100 M4x1[10 5 700 500]"
+    }
+  }
+  data {
+    id			    4
+    ssIdNumber		    12
+    name		    "p_des"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 0 5]
+  }
+  data {
+    id			    5
+    ssIdNumber		    8
+    name		    "z1_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 4 6]
+  }
+  data {
+    id			    6
+    ssIdNumber		    9
+    name		    "z2_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 5 7]
+  }
+  data {
+    id			    7
+    ssIdNumber		    10
+    name		    "z3_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 6 8]
+  }
+  data {
+    id			    8
+    ssIdNumber		    4
+    name		    "p"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 7 9]
+  }
+  data {
+    id			    9
+    ssIdNumber		    5
+    name		    "y"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 8 10]
+  }
+  data {
+    id			    10
+    ssIdNumber		    6
+    name		    "v"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 9 11]
+  }
+  data {
+    id			    11
+    ssIdNumber		    7
+    name		    "i"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 10 12]
+  }
+  data {
+    id			    12
+    ssIdNumber		    11
+    name		    "u_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 11 13]
+  }
+  data {
+    id			    13
+    ssIdNumber		    13
+    name		    "u"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [2 12 0]
+  }
+  junction {
+    id			    14
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    subviewer		    2
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+    linkNode		    [2 0 0]
+  }
+  transition {
+    id			    15
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [28.125 13.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      14
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+    linkNode		    [2 0 0]
+  }
+  instance {
+    id			    16
+    machine		    1
+    name		    "Magnetic Levitation System\nwith Dynamic SCM/SMC with Dynamic Control + Plant"
+    chart		    2
+  }
+  chart {
+    id			    17
+    machine		    1
+    name		    "Magnetic Levitation System\nwith Static SCM/SMC with Static Control + Plant"
+    windowPosition	    [422 539.941 189 413]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 3600 1200 1.180555555555556]
+    treeNode		    [0 18 0 0]
+    viewObj		    17
+    ssIdHighWaterMark	    12
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    chartFileNumber	    2
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+    firstData		    19
+    firstTransition	    29
+    firstJunction	    28
+  }
+  state {
+    id			    18
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    17
+    treeNode		    [17 0 0 0]
+    superState		    SUBCHART
+    subviewer		    17
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [z1_dot, z2_dot, z3_dot, y, u]= fcn(p_des, p, v, i)\n\n%%\n% x1 = p (position)\n% x2 = v"
+      " (velocity)\n% x3 = i (current)\n% u = e (applied voltage)\n\ng = 9.81;\nC = 1.4*10^-4; \nR = 28.7;\nL1 = 0.65;\n"
+      "m = 11.87*10^-3  ;\n\nW = 350;\nlambda_1 = 61;\nlambda_2 = 930;\n\nL = L1 + 2*C/p;\n\n% Defining State variables"
+      "\nx1 = p;\nx2 = v;\nx3 = i;\nx1_des = p_des;\n\nz1 = x1 - x1_des;\nz2 = x2;                   % x2_des = 0\nz3 ="
+      " g - (C/m)*(x3/x1)^2;   \n\nf1 = 2*(C/m)*((1 - 2*C/(L*x1))*x2*x3^2/x1^3 + (R/L)*(x3^2/x1^2));\ng1 = -2*C*x3/(L*m"
+      "*x1^2);\n\nu = 1/g1*(-f1 - lambda_1*z3 - lambda_2*z2 - W*sign(z3 + lambda_1*z2 + lambda_2*z1)); % Control input "
+      ": applied voltage\n\n% State space model in new coordinates. \nz1_dot = z2;\nz2_dot = z3;\nz3_dot = f1 + g1*u;\n"
+      "\ny = z1; % Output of state space model.\n"
+      editorLayout	      "100 M4x1[10 5 700 500]"
+    }
+  }
+  data {
+    id			    19
+    ssIdNumber		    12
+    name		    "p_des"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [17 0 20]
+  }
+  data {
+    id			    20
+    ssIdNumber		    8
+    name		    "z1_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [17 19 21]
+  }
+  data {
+    id			    21
+    ssIdNumber		    9
+    name		    "z2_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [17 20 22]
+  }
+  data {
+    id			    22
+    ssIdNumber		    10
+    name		    "z3_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [17 21 23]
+  }
+  data {
+    id			    23
+    ssIdNumber		    4
+    name		    "p"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [17 22 24]
+  }
+  data {
+    id			    24
+    ssIdNumber		    5
+    name		    "y"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [17 23 25]
+  }
+  data {
+    id			    25
+    ssIdNumber		    6
+    name		    "v"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [17 24 26]
+  }
+  data {
+    id			    26
+    ssIdNumber		    7
+    name		    "i"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [17 25 27]
+  }
+  data {
+    id			    27
+    ssIdNumber		    11
+    name		    "u"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [17 26 0]
+  }
+  junction {
+    id			    28
+    position		    [23.5747 49.5747 7]
+    chart		    17
+    subviewer		    17
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+    linkNode		    [17 0 0]
+  }
+  transition {
+    id			    29
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [28.125 13.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      28
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    17
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    17
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+    linkNode		    [17 0 0]
+  }
+  instance {
+    id			    30
+    machine		    1
+    name		    "Magnetic Levitation System\nwith Static SCM/SMC with Static Control + Plant"
+    chart		    17
+  }
+  chart {
+    id			    31
+    machine		    1
+    name		    "Magnetic Levitation System\nwith Modified Dynamic SCM/SMC with Modified Dynamic Control + Plant"
+    windowPosition	    [422 539.941 189 413]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 3600 1200 1.180555555555556]
+    treeNode		    [0 32 0 0]
+    viewObj		    31
+    ssIdHighWaterMark	    14
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    chartFileNumber	    3
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+    firstData		    33
+    firstTransition	    45
+    firstJunction	    44
+  }
+  state {
+    id			    32
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    31
+    treeNode		    [31 0 0 0]
+    superState		    SUBCHART
+    subviewer		    31
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [z1_dot, z2_dot, z3_dot, y, u, w_dot]= fcn(p_des, p, v, i, w)\n\n%%\n% x1 = p (position)"
+      "\n% x2 = v (velocity)\n% x3 = i (current)\n% u = e (applied voltage)\n\ng = 9.81;\nC = 1.4*10^-4; \nR = 28.7;\nL"
+      "1 = 0.65;\nm = 11.87*10^-3;\n\nW2 = 100;\nc1 = 29760;\nc2 = 2882;\nc3 = 93;\n\nL = L1 + 2*C/p;\n\n% Defining Sta"
+      "te variables\nx1 = p;\nx2 = v;\nx3 = i;\nx1_des = p_des;\n\nz1 = x1 - x1_des;\nz2 = x2;                   % x2_d"
+      "es = 0\nz3 = g - (C/m)*(x3/x1)^2;   \n\nf1 = 2*(C/m)*((1 - 2*C/(L*x1))*x2*x3^2/x1^3 + (R/L)*(x3^2/x1^2));\ng1 = "
+      "-2*C*x3/(L*m*x1^2);\n\nu = -1/g1*(f1 + c1*z1 + c2*z2 + c3*z3) + w; % Control input : applied voltage\nw_dot = -W"
+      "2*sign(u + 1/g1*(f1 + c1*z1 + c2*z2 + c3*z3));\n\n% State space model in new coordinates. \nz1_dot = z2;\nz2_dot"
+      " = z3;\nz3_dot = f1 + g1*u;\n\ny = z1; % Output of state space model.\n"
+      editorLayout	      "100 M4x1[10 5 700 500]"
+    }
+  }
+  data {
+    id			    33
+    ssIdNumber		    12
+    name		    "p_des"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 0 34]
+  }
+  data {
+    id			    34
+    ssIdNumber		    8
+    name		    "z1_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 33 35]
+  }
+  data {
+    id			    35
+    ssIdNumber		    9
+    name		    "z2_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 34 36]
+  }
+  data {
+    id			    36
+    ssIdNumber		    10
+    name		    "z3_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 35 37]
+  }
+  data {
+    id			    37
+    ssIdNumber		    4
+    name		    "p"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 36 38]
+  }
+  data {
+    id			    38
+    ssIdNumber		    5
+    name		    "y"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 37 39]
+  }
+  data {
+    id			    39
+    ssIdNumber		    6
+    name		    "v"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 38 40]
+  }
+  data {
+    id			    40
+    ssIdNumber		    7
+    name		    "i"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 39 41]
+  }
+  data {
+    id			    41
+    ssIdNumber		    11
+    name		    "u"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 40 42]
+  }
+  data {
+    id			    42
+    ssIdNumber		    13
+    name		    "w"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 41 43]
+  }
+  data {
+    id			    43
+    ssIdNumber		    14
+    name		    "w_dot"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [31 42 0]
+  }
+  junction {
+    id			    44
+    position		    [23.5747 49.5747 7]
+    chart		    31
+    subviewer		    31
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+    linkNode		    [31 0 0]
+  }
+  transition {
+    id			    45
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [28.125 13.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      44
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    31
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    31
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+    linkNode		    [31 0 0]
+  }
+  instance {
+    id			    46
+    machine		    1
+    name		    "Magnetic Levitation System\nwith Modified Dynamic SCM/SMC with Modified Dynamic Control + Plant"
+    chart		    31
+  }
+  target {
+    id			    47
+    machine		    1
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    linkNode		    [1 0 0]
+  }
+}
